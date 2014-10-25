@@ -26,7 +26,7 @@ export GAIA_DEFAULT_LOCALE=es
 
 ## Idiomas GECKO
 export L10NBASEDIR=$PWD/gecko-l10n
-export MOZ_CHROME_MULTILOCALE="en-GB es-MX"
+export MOZ_CHROME_MULTILOCALE="en-GB es-MX pt-BR"
 
 ## Compare locales
 export PATH="$PATH:$PWD/compare-locales/scripts"
