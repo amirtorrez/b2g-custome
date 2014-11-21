@@ -2,7 +2,9 @@
 BRANCH=master
 
 ## Tipo de build
-VARIANT=userdebug
+VARIANT=eng
+export PRODUCTION=1
+export GAIA_DISTRIBUTION_DIR=$PWD/gaia-custom
 
 ## Boot logo
 export ENABLE_DEFAULT_BOOTANIMATION=true
