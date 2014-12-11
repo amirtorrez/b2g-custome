@@ -43,12 +43,31 @@ hg clone https://hg.mozilla.org/$LANG_URL/pt-BR $LANG_DIR/pt-BR
 hg clone https://hg.mozilla.org/$LANG_URL/ru $LANG_DIR/ru
 hg clone https://hg.mozilla.org/$LANG_URL/zh-CN $LANG_DIR/zh-CN
 
+## Creamos el archivo languages_dev.json
+cat << EOF > gaia-l10n/languages_dev.json
+{
+  "bn-BD"     : "বাংলা (বাংলাদেশ)",
+  "de"        : "Deutsch",
+  "el"        : "Ελληνικά",
+  "en-US"     : "English (US)",
+  "es"        : "Español",
+  "fr"        : "Français",
+  "hi-IN"     : "हिन्दी (भारत)",
+  "hu"        : "Magyar",
+  "it"        : "Italiano",
+  "ja"        : "日本語",
+  "pl"        : "Polski",
+  "pt-BR"     : "Português (do Brasil)",
+  "ru"        : "Русский",
+  "zh-CN"     : "中文 (简体)"
+}
+EOF
+
 ## Nos ubicamos dentro la carpeta de los idiomas
 cd $LANG_DIR
 
-## Descargamos los archivos json que listan los idiomas
+## Descargamos el archivo json que lista todos los idiomas
 wget https://raw.githubusercontent.com/amirtorrez/b2g-custome/master/gaia-l10n/languages_all.json
-wget https://raw.githubusercontent.com/amirtorrez/b2g-custome/master/sh/languages_dev.json
 
 ## Si el paquete mercurial no está instalado
 ## se muestra un aviso al usuario
