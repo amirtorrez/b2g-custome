@@ -43,8 +43,11 @@ hg clone https://hg.mozilla.org/$LANG_URL/pt-BR $LANG_DIR/pt-BR
 hg clone https://hg.mozilla.org/$LANG_URL/ru $LANG_DIR/ru
 hg clone https://hg.mozilla.org/$LANG_URL/zh-CN $LANG_DIR/zh-CN
 
+## Nos ubicamos dentro la carpeta de los idiomas
+cd $LANG_DIR
+
 ## Creamos el archivo languages_dev.json
-cat << EOF > $LANG_DIR/languages_dev.json
+cat << EOF > languages_dev.json
 {
   "bn-BD"     : "বাংলা (বাংলাদেশ)",
   "de"        : "Deutsch",
@@ -62,9 +65,6 @@ cat << EOF > $LANG_DIR/languages_dev.json
   "zh-CN"     : "中文 (简体)"
 }
 EOF
-
-## Nos ubicamos dentro la carpeta de los idiomas
-cd $LANG_DIR
 
 ## Descargamos el archivo json que lista todos los idiomas
 wget https://raw.githubusercontent.com/amirtorrez/b2g-custome/master/gaia-l10n/languages_all.json
