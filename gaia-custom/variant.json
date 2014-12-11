@@ -9,8 +9,7 @@
       {
         "manifestURL": "https://marketplace.firefox.com/app/f71c1433-b575-419f-a3df-92649c11eb43/manifest.webapp",
         "installOrigin": "https://marketplace.firefox.com"
-      }
-  },
+      },
     "LED Flashlight":
       {
         "manifestURL": "https://marketplace.firefox.com/app/00fa25d6-d86a-459b-b540-36de41450293/manifest.webapp",
@@ -35,10 +34,6 @@
       {
         "manifestURL": "https://mobile.twitter.com/cache/twitter.webapp",
         "installOrigin": "https://marketplace.firefox.com"
-      },
-  "operators": [
-    {
-      "wallpaper": "wallpapers/FX_Custom.jpg"
-    }
-  ]
+      }
+  }
 }
