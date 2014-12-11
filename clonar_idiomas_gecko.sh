@@ -38,7 +38,7 @@ hg clone https://hg.mozilla.org/l10n-central/zh-CN $LANG_DIR/zh-CN
 cd $LANG_DIR
 
 ## Creamos el archivo all-locales
-cat << EOF > gecko-l10n/all-locales
+cat << EOF > $LANG_DIR/all-locales
 bn-BD
 de
 el
