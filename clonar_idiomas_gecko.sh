@@ -37,8 +37,23 @@ hg clone https://hg.mozilla.org/l10n-central/zh-CN $LANG_DIR/zh-CN
 ## Nos ubicamos dentro la carpeta de los idiomas
 cd $LANG_DIR
 
-## Descargamos los archivos json que listan los idiomas
-wget https://raw.githubusercontent.com/amirtorrez/b2g-custome/master/sh/all-locales
+## Creamos el archivo all-locales
+cat << EOF > gecko-l10n/all-locales
+bn-BD
+de
+el
+en-GB
+es-MX
+fr
+hi-IN
+hu
+it
+ja
+pl
+pt-BR
+ru
+zh-CN
+EOF
 
 ## Si el paquete mercurial no está instalado
 ## se muestra un aviso al usuario
