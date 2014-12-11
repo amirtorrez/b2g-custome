@@ -19,7 +19,7 @@ export CXX=g++-4.6
 
 ## Habilitando la depuracion
 export REMOTE_DEBUGGER=1
-export DEVICE_DEBUG=1
+##export DEVICE_DEBUG=1
 
 ## Idiomas GAIA
 export LOCALE_BASEDIR=$PWD/gaia-l10n
