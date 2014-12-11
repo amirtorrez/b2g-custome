@@ -38,7 +38,7 @@ hg clone https://hg.mozilla.org/l10n-central/zh-CN $LANG_DIR/zh-CN
 cd $LANG_DIR
 
 ## Descargamos los archivos json que listan los idiomas
-wget https://raw.githubusercontent.com/amirtorrez/b2g-custome/master/all-locales
+wget https://raw.githubusercontent.com/amirtorrez/b2g-custome/master/sh/all-locales
 
 ## Si el paquete mercurial no está instalado
 ## se muestra un aviso al usuario
