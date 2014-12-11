@@ -7,6 +7,5 @@
  "keyboard.clicksound":false,
  "keyboard.autocorrect":false,
  "keyboard.wordsuggestion":false,
- "lockscreen.enabled":true,
- "wallpaper.image": "wallpapers/FX_Custom.jpg"
+ "lockscreen.enabled":true
 }
