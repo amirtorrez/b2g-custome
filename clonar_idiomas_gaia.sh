@@ -4,7 +4,7 @@ echo -e "----      Clonador de idiomas GAIA        ----"
 echo -e "----    Script creado por @amirtorrez     ----"
 echo -e "----------------------------------------------"
 
-LANG_DIR="gaia-l10n"; ## Carpeta donde irá todo
+LANG_DIR="gaia-l10n"; ## Carpeta donde irán todos los idiomas
 LANG_VERSION="master"; ## Version de B2G para los idiomas (master,v2_1, v2_0, v1_4, etc)
 
 ## Se verifica que el paquete mercurial esté instalado
