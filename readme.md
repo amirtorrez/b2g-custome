@@ -24,7 +24,7 @@ In <b>clonar_idiomas_gaia.sh</b>
 - <b>LANG_VERSION</b>  --> Is a GAIA version like B2G, example: v1_2,v1_3,v2_0, etc, master is a last version of B2G
 
 In <b>clonar_idiomas_gecko.sh</b>
-- <b>LANG_DIR="gecko-l10n";</b> --> Is a folder where download GECKO languages
+- <b>LANG_DIR</b> --> Is a folder where download GECKO languages
 
 Change file permissions:<br>
 $>  chmod 777 clonar_idiomas_gaia.sh<br>
