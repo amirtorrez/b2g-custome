@@ -5,6 +5,7 @@ BRANCH=master
 VARIANT=eng
 export PRODUCTION=1
 export GAIA_DISTRIBUTION_DIR=$PWD/gaia-custom
+GECKO_CONFIGURE_ARGS="--update-channel=nightly"
 
 ## Boot logo
 export ENABLE_DEFAULT_BOOTANIMATION=true
@@ -19,7 +20,6 @@ export CXX=g++-4.6
 
 ## Habilitando la depuracion
 export REMOTE_DEBUGGER=1
-##export DEVICE_DEBUG=1
 
 ## Idiomas GAIA
 export LOCALE_BASEDIR=$PWD/gaia-l10n
