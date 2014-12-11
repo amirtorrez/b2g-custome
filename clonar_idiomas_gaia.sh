@@ -44,7 +44,7 @@ hg clone https://hg.mozilla.org/$LANG_URL/ru $LANG_DIR/ru
 hg clone https://hg.mozilla.org/$LANG_URL/zh-CN $LANG_DIR/zh-CN
 
 ## Creamos el archivo languages_dev.json
-cat << EOF > gaia-l10n/languages_dev.json
+cat << EOF > $LANG_DIR/languages_dev.json
 {
   "bn-BD"     : "বাংলা (বাংলাদেশ)",
   "de"        : "Deutsch",
