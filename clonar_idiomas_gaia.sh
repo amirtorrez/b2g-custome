@@ -2,7 +2,6 @@
 echo -e "\n----------------------------------------------"
 echo -e "----      Clonador de idiomas GAIA        ----"
 echo -e "----    Script creado por @amirtorrez     ----"
-echo -e "----     para la comunidad Vegnuxmod      ----"
 echo -e "----------------------------------------------"
 
 LANG_DIR="gaia-l10n"; ## Carpeta donde irá todo
