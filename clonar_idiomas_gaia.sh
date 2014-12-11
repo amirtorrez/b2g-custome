@@ -48,7 +48,7 @@ cd $LANG_DIR
 
 ## Descargamos los archivos json que listan los idiomas
 wget https://raw.githubusercontent.com/amirtorrez/b2g-custome/master/gaia-l10n/languages_all.json
-wget https://raw.githubusercontent.com/amirtorrez/b2g-custome/master/languages_dev.json
+wget https://raw.githubusercontent.com/amirtorrez/b2g-custome/master/sh/languages_dev.json
 
 ## Si el paquete mercurial no está instalado
 ## se muestra un aviso al usuario
