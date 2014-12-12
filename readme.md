@@ -27,5 +27,5 @@ To download languages edit sh scripts variables:
 Change file permissions:<br>
 $>  chmod 777 clonar_idiomas.sh
 
-And run in console:<br>
-./clonar_idiomas.sh
+And run:<br>
+$>  ./clonar_idiomas.sh
