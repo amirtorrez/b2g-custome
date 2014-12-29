@@ -47,6 +47,7 @@ hg clone https://hg.mozilla.org/$LANG_URL/ja $LANG_DIR1/ja
 hg clone https://hg.mozilla.org/$LANG_URL/pl $LANG_DIR1/pl
 hg clone https://hg.mozilla.org/$LANG_URL/pt-BR $LANG_DIR1/pt-BR
 hg clone https://hg.mozilla.org/$LANG_URL/ru $LANG_DIR1/ru
+hg clone https://hg.mozilla.org/$LANG_URL/sv-SE $LANG_DIR1/sv-SE
 hg clone https://hg.mozilla.org/$LANG_URL/zh-CN $LANG_DIR1/zh-CN
 
 echo -e "\nClonando idiomas GECKO\n";
@@ -64,6 +65,7 @@ hg clone https://hg.mozilla.org/l10n-central/ja $LANG_DIR2/ja
 hg clone https://hg.mozilla.org/l10n-central/pl $LANG_DIR2/pl
 hg clone https://hg.mozilla.org/l10n-central/pt-BR $LANG_DIR2/pt-BR
 hg clone https://hg.mozilla.org/l10n-central/ru $LANG_DIR2/ru
+hg clone https://hg.mozilla.org/l10n-central/sv-SE $LANG_DIR2/sv-SE
 hg clone https://hg.mozilla.org/l10n-central/zh-CN $LANG_DIR2/zh-CN
 
 echo -e "\nClonando compare-locales\n";
@@ -89,6 +91,7 @@ cat << EOF > languages_dev.json
   "pl"        : "Polski",
   "pt-BR"     : "Português (do Brasil)",
   "ru"        : "Русский",
+  "sv-SE"     : "Svenska",
   "zh-CN"     : "中文 (简体)"
 }
 EOF
@@ -114,6 +117,7 @@ ja
 pl
 pt-BR
 ru
+sv-SE
 zh-CN
 EOF
 
