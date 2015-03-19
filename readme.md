@@ -13,6 +13,7 @@ Prepared customization to build B2G, with languages like:
 - Português (do Brasil)
 - Русский
 - Svenska
+- Türkçe
 - 中文 (简体)
 
 
