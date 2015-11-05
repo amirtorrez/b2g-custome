@@ -2,14 +2,18 @@
 BRANCH=master
 
 ## Tipo de build
-VARIANT=user  ## Build sin root
-##VARIANT=eng  ## Build con root
-export PRODUCTION=1
-export GAIA_DISTRIBUTION_DIR=$PWD/gaia-custom
-
-## Boot logo
-export ENABLE_DEFAULT_BOOTANIMATION=true
-export MOZILLA_OFFICIAL=1
+VARIANT=user  ## Build sin root, para usuario final
+##VARIANT=eng  ## Build con root, para desarrolladores
+export PRODUCTION=1 ## Instalar apps de desarrollo (con la variante eng)
+export GAIA_DISTRIBUTION_DIR=$PWD/gaia-custom ## Carpeta de personalizaciones
+export GAIA_OPTIMIZE=1 ## Optimizar javascript
+export ENABLE_DEFAULT_BOOTANIMATION=true ## Habilitar boot animacion de mozilla
+export MOZILLA_OFFICIAL=1 ## Compilar build como oficial de mozilla
+export B2G_UPDATER=1 ## Habilitar actualizaciones nightly
+export B2G_UPDATE_CHANNEL=default ## Canal de actualizaciones
+##export DEVICE_DEBUG=1 ## Habilitar hackeo de gaia (modo desarrollador)
+##export B2G_SYSTEM_APPS=1 ## Apps en /system no en /data/local
+##export GAIA_MEMORY_PROFILE=low ## Build para dispositivos de bajos recursos (hamachi/inari)
 
 ## Limitando cache
 ccache --max-size 5GB
@@ -24,7 +28,7 @@ export REMOTE_DEBUGGER=1
 ## Idiomas GAIA
 export LOCALE_BASEDIR=$PWD/gaia-l10n
 export LOCALES_FILE=$PWD/gaia-l10n/languages_dev.json
-export GAIA_DEFAULT_LOCALE=es
+export GAIA_DEFAULT_LOCALE=es ## Idioma por defecto de la build
 
 ## Idiomas GECKO
 ##export L10NBASEDIR=$PWD/gecko-l10n
