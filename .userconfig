@@ -4,7 +4,7 @@ BRANCH=master
 ## Tipo de build
 VARIANT=user  ## Build sin root, para usuario final
 ##VARIANT=eng  ## Build con root, para desarrolladores
-export PRODUCTION=1 ## Instalar apps de desarrollo (con la variante eng)
+export PRODUCTION=1 ## No instalar apps de desarrollo (con la variante eng)
 export GAIA_DISTRIBUTION_DIR=$PWD/gaia-custom ## Carpeta de personalizaciones
 export GAIA_OPTIMIZE=1 ## Optimizar javascript
 export ENABLE_DEFAULT_BOOTANIMATION=true ## Habilitar boot animacion de mozilla
