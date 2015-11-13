@@ -29,11 +29,3 @@ export REMOTE_DEBUGGER=1
 export LOCALE_BASEDIR=$PWD/gaia-l10n
 export LOCALES_FILE=$PWD/gaia-l10n/languages_dev.json
 export GAIA_DEFAULT_LOCALE=es ## Idioma por defecto de la build
-
-## Idiomas GECKO
-##export L10NBASEDIR=$PWD/gecko-l10n
-##export MOZ_CHROME_MULTILOCALE="en-GB es-MX pt-BR"
-
-## Compare locales
-export PATH="$PATH:$PWD/compare-locales/scripts"
-export PYTHONPATH="$PWD/compare-locales/lib"
