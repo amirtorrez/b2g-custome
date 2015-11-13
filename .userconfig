@@ -19,8 +19,8 @@ export B2G_UPDATE_CHANNEL=default ## Canal de actualizaciones
 ccache --max-size 5GB
 
 ## Cambiar host compilador
-export CC=gcc-4.6
-export CXX=g++-4.6
+export CC=gcc-4.7
+export CXX=g++-4.7
 
 ## Habilitando la depuracion
 export REMOTE_DEBUGGER=1
