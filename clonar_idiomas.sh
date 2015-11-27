@@ -5,48 +5,39 @@ echo -e "----    Script creado por @amirtorrez     ----"
 echo -e "----------------------------------------------"
 
 ## Variables de idiomas
-LANG_DIR1="gaia-l10n"; ## Carpeta donde irán todos los idiomas de GAIA
-LANG_VERSION="master"; ## Version de B2G para los idiomas (master,v2_1, v2_0, v1_4, etc)
+LANG_DIR="gaia-l10n"; ## Carpeta donde irán todos los idiomas de GAIA
+LANG_VERSION="master"; ## Version de B2G para los idiomas (master,v2_5, v2_2, v2_0, v1_4, etc)
+LANG_LIST=("bn-BD" "de" "el" "en-US" "es" "fr" "hi-IN" "hu" "it" "ja" "pl" "pt-BR" "ru" "sv-SE" "tr" "zh-CN"); ## Lista de idiomas a descargar
 
 ## Se verifica que el paquete mercurial esté instalado
 if [ -x /usr/bin/hg ]; then
 ## si está instalado se ejecuta el script
 
-## Si existe la carpeta anterior la borramos
-## para meter los nuevos archivos dentro
-if [ -d $LANG_DIR1 ]; then
-rm -r -f $LANG_DIR1
+## Si existe la carpeta anterior la borramos para meter los nuevos archivos dentro
+if [ -d $LANG_DIR ]; then
+	rm -r -f $LANG_DIR
 fi
 
-## Definimos la url de descarga
-## dependiendo la version de B2G
+## Creamos de nuevo la carpeta
+mkdir $LANG_DIR
+
+## Definimos la url de descarga dependiendo la version de B2G
 if [ "$LANG_VERSION" = "master" ]; then
 	LANG_URL="gaia-l10n";
 else
 	LANG_URL="releases/gaia-l10n/$LANG_VERSION";
 fi
 
-echo -e "\nClonando idiomas GAIA\n";
+echo -e "\nClonando idiomas GAIA";
 ## Clonamos los idiomas desde mozilla
-hg clone https://hg.mozilla.org/$LANG_URL/bn-BD $LANG_DIR1/bn-BD
-hg clone https://hg.mozilla.org/$LANG_URL/de $LANG_DIR1/de
-hg clone https://hg.mozilla.org/$LANG_URL/el $LANG_DIR1/el
-hg clone https://hg.mozilla.org/$LANG_URL/en-US $LANG_DIR1/en-US
-hg clone https://hg.mozilla.org/$LANG_URL/es $LANG_DIR1/es
-hg clone https://hg.mozilla.org/$LANG_URL/fr $LANG_DIR1/fr
-hg clone https://hg.mozilla.org/$LANG_URL/hi-IN $LANG_DIR1/hi-IN
-hg clone https://hg.mozilla.org/$LANG_URL/hu $LANG_DIR1/hu
-hg clone https://hg.mozilla.org/$LANG_URL/it $LANG_DIR1/it
-hg clone https://hg.mozilla.org/$LANG_URL/ja $LANG_DIR1/ja
-hg clone https://hg.mozilla.org/$LANG_URL/pl $LANG_DIR1/pl
-hg clone https://hg.mozilla.org/$LANG_URL/pt-BR $LANG_DIR1/pt-BR
-hg clone https://hg.mozilla.org/$LANG_URL/ru $LANG_DIR1/ru
-hg clone https://hg.mozilla.org/$LANG_URL/sv-SE $LANG_DIR1/sv-SE
-hg clone https://hg.mozilla.org/$LANG_URL/tr $LANG_DIR1/tr
-hg clone https://hg.mozilla.org/$LANG_URL/zh-CN $LANG_DIR1/zh-CN
+for (( i = 0; i < ${#LANG_LIST[@]}; i++ ));
+do
+	echo -e "\n## Descargando el idioma: ${LANG_LIST[$i]} ##";
+	hg clone https://hg.mozilla.org/$LANG_URL/${LANG_LIST[$i]} $LANG_DIR/${LANG_LIST[$i]};
+done
 
 ## Nos ubicamos dentro la carpeta de los idiomas
-cd $LANG_DIR1
+cd $LANG_DIR
 
 ## Creamos el archivo languages_dev.json
 cat << EOF > languages_dev.json
@@ -73,8 +64,7 @@ EOF
 ## Descargamos el archivo json que lista todos los idiomas
 wget https://raw.githubusercontent.com/amirtorrez/b2g-custome/master/gaia-l10n/languages_all.json
 
-## Si el paquete mercurial no está instalado
-## se muestra un aviso al usuario
+## Si el paquete mercurial no está instalado se muestra un aviso al usuario
 else
 echo -e '\nSe necesita "mercurial" instalado para usar este script.\n';
 fi
