@@ -7,7 +7,8 @@ echo -e "----------------------------------------------"
 ## Variables de idiomas
 LANG_DIR="gaia-l10n"; ## Carpeta donde irán todos los idiomas de GAIA
 LANG_VERSION="master"; ## Version de B2G para los idiomas (master,v2_5, v2_2, v2_0, v1_4, etc)
-LANG_LIST=("bn-BD" "de" "el" "en-US" "es" "fr" "hi-IN" "hu" "it" "ja" "pl" "pt-BR" "ru" "sv-SE" "tr" "zh-CN"); ## Lista de idiomas a descargar
+## Lista de idiomas a descargar
+LANG_LIST=("bn-BD" "de" "el" "en-US" "es" "fr" "hi-IN" "hu" "it" "ja" "pl" "pt-BR" "ru" "sv-SE" "tr" "zh-CN"); 
 
 ## Se verifica que el paquete mercurial esté instalado
 if [ -x /usr/bin/hg ]; then
