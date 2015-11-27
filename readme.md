@@ -21,8 +21,9 @@ And including .userconfig file with build preferences, also a bash scripts to up
 
 To download languages edit sh scripts variables:
 
-- <b>LANG_DIR1</b> --> Is a folder where download GAIA languages
+- <b>LANG_DIR</b> --> Is a folder where download GAIA languages
 - <b>LANG_VERSION</b>  --> Is a GAIA version like B2G, example: v1_2,v1_3,v2_0, etc, master is a last version of B2G
+- <b>LANG_LIST</b> --> Is the list of languages to download (also, need add new languages to languages_dev.json file)
 
 Change file permissions:<br>
 $>  chmod 777 clonar_idiomas.sh
