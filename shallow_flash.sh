@@ -147,7 +147,7 @@ function adb_clean_gaia() {
     ##run_adb shell rm -r /data/local/webapps &&
     ##run_adb shell rm -r /data/local/user.js &&
     ##run_adb shell rm -r /data/local/permissions.sqlite* &&
-    ##run_adb shell rm -r /data/local/OfflineCache &&
+    run_adb shell rm -r /data/local/OfflineCache ##&&
     ##run_adb shell rm -r /data/local/indexedDB &&
     ##run_adb shell rm -r /data/local/debug_info_trigger &&
     ##run_adb shell rm -r /system/b2g/webapps &&
